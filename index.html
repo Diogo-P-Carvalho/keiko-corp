@@ -109,9 +109,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center animated wow fadeInLeft">
-					<div class="iphone">
-						<img src="img/iphone.png" alt="" titl="">
-					</div>
+					<div class="iphone"></div>
 				</div>
 				<div class="col-md-6 animated wow fadeInRight">
 					<div class="features_list">
@@ -286,7 +284,20 @@
 		<p class="copyright animated wow fadeIn" data-wow-duration="2s"> <strong>Pixelhint</strong>
 	</footer>
 	<!--  End Footer Section  -->
-
+	
+	<script>
+		window.addEventListener("scroll", addIphoneImg);
+		function addIphoneImg() {
+		const imgContainer = document.getElementsByClassName("iphone")[0];
+        if (!imgContainer.hasChildNodes()) {
+          const iphoneImg = document.createElement("img");
+          iphoneImg.setAttribute("src", "img/iphone.png");
+          iphoneImg.setAttribute("alt", "");
+          iphoneImg.setAttribute("title", "iphone");
+          imgContainer.appendChild(iphoneImg);
+        }
+	  }	  
+</script>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/wow.js"></script>
